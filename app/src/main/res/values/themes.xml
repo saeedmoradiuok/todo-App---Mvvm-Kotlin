@@ -1,0 +1,39 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.TodoApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_500</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="boldText" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/iran_yekan_bold</item>
+        <item name="android:textSize">@dimen/size_16sp</item>
+    </style>
+
+    <style name="normalText" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/iran_yekan_regular</item>
+        <item name="android:textSize">@dimen/size_14sp</item>
+        <item name="android:lineSpacingExtra">@dimen/size_10dp</item>
+    </style>
+
+    <style name="editTextStyle" parent="Widget.AppCompat.EditText">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/iran_yekan_regular</item>
+        <item name="android:textSize">@dimen/size_14sp</item>
+        <item name="android:lineSpacingExtra">@dimen/size_10dp</item>
+        <item name="android:textColorHint">@color/blackTint</item>
+        <item name="android:background">@drawable/et_bg</item>
+    </style>
+
+</resources>

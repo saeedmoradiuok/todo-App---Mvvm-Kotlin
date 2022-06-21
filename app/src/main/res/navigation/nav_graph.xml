@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="uok.sm.coding.todoapp.ui.fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_addTaskFragment"
+            app:destination="@id/addTaskFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_operationsFragment"
+            app:destination="@id/operationsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addTaskFragment"
+        android:name="uok.sm.coding.todoapp.ui.fragment.AddTaskFragment"
+        android:label="fragment_add_task"
+        tools:layout="@layout/fragment_add_task" />
+    <dialog
+        android:id="@+id/operationsFragment"
+        android:name="uok.sm.coding.todoapp.ui.fragment.OperationsFragment"
+        android:label="fragment_operations"
+        tools:layout="@layout/fragment_operations" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+        <argument
+            android:name="done"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/action_operationsFragment_to_editFragment"
+            app:destination="@id/editFragment"
+            app:popUpTo="@id/operationsFragment"
+            app:popUpToInclusive="true" />
+    </dialog>
+    <fragment
+        android:id="@+id/editFragment"
+        android:name="uok.sm.coding.todoapp.ui.fragment.EditFragment"
+        android:label="fragment_edit"
+        tools:layout="@layout/fragment_edit" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+</navigation>

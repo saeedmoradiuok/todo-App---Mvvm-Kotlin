@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TodoApp</string>
+    <string name="empty_title">برای امروز کاری ثبت نشده است</string>
+    <string name="empty_description">با زدن روی «ایجاد کار جدید» می توانید کارهای روزانه خود را اضافه کرده و آنها را مدیریت کنید</string>
+    <string name="test">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، با زدن روی «ایجاد کار جدید» می توانید کارهای روزانه خود را اضافه کرده و آنها را مدیریت کنید</string>
+    <string name="add_task">ایجاد کار جدید</string>
+    <string name="pick_time">ساعت را انتخاب کنید</string>
+    <string name="operation_title">عملیات مورد نظر را انتخاب کنید</string>
+</resources>

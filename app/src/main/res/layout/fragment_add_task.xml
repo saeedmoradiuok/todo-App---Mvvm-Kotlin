@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.fragment.AddTaskFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/purple_500"
+                android:paddingHorizontal="@dimen/size_6dp"
+                android:paddingVertical="@dimen/size_16dp">
+
+                <ImageView
+                    android:id="@+id/imgNext"
+                    android:layout_width="@dimen/size_48dp"
+                    android:layout_height="@dimen/size_48dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:padding="@dimen/size_10dp"
+                    android:rotation="180"
+                    android:src="@drawable/ic_prev"
+                    app:tint="@color/white" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvDayName"
+                        style="@style/boldText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="امروز یکشنبه"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/size_18sp" />
+
+                    <TextView
+                        android:id="@+id/tvDate"
+                        style="@style/normalText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/size_8dp"
+                        android:text="29 خرداد 1401"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/size_16sp" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/imgPrev"
+                    android:layout_width="@dimen/size_48dp"
+                    android:layout_height="@dimen/size_48dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:padding="@dimen/size_10dp"
+                    android:src="@drawable/ic_prev"
+                    app:tint="@color/white" />
+
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/etTitle"
+                style="@style/editTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_120dp"
+                android:layout_marginHorizontal="@dimen/size_16dp"
+                android:layout_marginTop="@dimen/size_24dp"
+                android:gravity="top"
+                android:maxLines="3"
+                android:padding="@dimen/size_16dp" />
+
+            <TextView
+                style="@style/boldText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/size_16dp"
+                android:layout_marginTop="@dimen/size_24dp"
+                android:text="@string/pick_time"
+                android:textSize="@dimen/size_16sp" />
+
+            <TimePicker
+                android:id="@+id/tpTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:timePickerMode="spinner" />
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <TextView
+        android:id="@+id/tvSaveTask"
+        style="@style/boldText"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_70dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/grayTint"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:gravity="center"
+        android:text="کار ذخیره شود"
+        android:textColor="@color/green"
+        android:textSize="@dimen/size_18sp" />
+
+</RelativeLayout>

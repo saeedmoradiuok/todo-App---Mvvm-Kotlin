@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.fragment.HomeFragment">
+
+    <include
+        android:id="@+id/layoutEmptyState"
+        layout="@layout/empty_layout"
+        android:visibility="gone" />
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/size_6dp"
+            android:layout_marginVertical="@dimen/size_16dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <ImageView
+                android:id="@+id/imgNext"
+                android:layout_width="@dimen/size_48dp"
+                android:layout_height="@dimen/size_48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:padding="@dimen/size_10dp"
+                android:rotation="180"
+                android:src="@drawable/ic_prev"
+                app:tint="@color/white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvDayName"
+                    style="@style/boldText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="امروز یکشنبه"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/size_18sp" />
+
+                <TextView
+                    android:id="@+id/tvDate"
+                    style="@style/normalText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_8dp"
+                    android:text="29 خرداد 1401"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/size_16sp" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imgPrev"
+                android:layout_width="@dimen/size_48dp"
+                android:layout_height="@dimen/size_48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:padding="@dimen/size_10dp"
+                android:src="@drawable/ic_prev"
+                app:tint="@color/white" />
+
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTasks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/size_16dp"
+        android:layout_marginTop="@dimen/size_16dp"
+        android:visibility="gone"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fabAddTask"
+        android:layout_width="@dimen/size_200dp"
+        android:layout_height="@dimen/size_50dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="@dimen/size_36dp"
+        android:backgroundTint="@color/green"
+        android:fontFamily="@font/iran_yekan_bold"
+        android:text="@string/add_task"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size_14sp" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

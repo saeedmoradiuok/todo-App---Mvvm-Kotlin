@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bottom_sheet_bg"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/size_16dp"
+    android:paddingVertical="@dimen/size_20dp"
+    tools:context=".ui.fragment.OperationsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/boldText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/operation_title"
+            android:textSize="@dimen/size_18sp" />
+
+        <ImageView
+            android:id="@+id/imgClose"
+            android:layout_width="@dimen/size_48dp"
+            android:layout_height="@dimen/size_48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:padding="@dimen/size_16dp"
+            android:src="@drawable/ic_close" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_24dp"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingVertical="@dimen/size_8dp">
+
+        <TextView
+            style="@style/normalText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="حذف شود"
+            android:textSize="@dimen/size_16sp" />
+
+        <ImageView
+            android:layout_width="@dimen/size_48dp"
+            android:layout_height="@dimen/size_48dp"
+            android:padding="@dimen/size_12dp"
+            android:src="@drawable/ic_delete" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/viewLine1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grayTint" />
+
+    <LinearLayout
+        android:id="@+id/layoutEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingVertical="@dimen/size_8dp">
+
+        <TextView
+            style="@style/normalText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ویرایش شود"
+            android:textSize="@dimen/size_16sp" />
+
+        <ImageView
+            android:layout_width="@dimen/size_48dp"
+            android:layout_height="@dimen/size_48dp"
+            android:padding="@dimen/size_12dp"
+            android:src="@drawable/ic_edit" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/viewLine2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grayTint" />
+
+    <LinearLayout
+        android:id="@+id/layoutDone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingVertical="@dimen/size_8dp">
+
+        <TextView
+            style="@style/normalText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="انجام شده است"
+            android:textSize="@dimen/size_16sp" />
+
+        <ImageView
+            android:layout_width="@dimen/size_48dp"
+            android:layout_height="@dimen/size_48dp"
+            android:padding="@dimen/size_12dp"
+            android:src="@drawable/ic_done" />
+
+    </LinearLayout>
+
+</LinearLayout>
